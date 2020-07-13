@@ -59,7 +59,9 @@ public class Rainbow {
 			
 			if (s == null || s.isEmpty()) {
 				s = "invalid";
+
 				System.out.print("YES/NO only");
+				
 				Thread.sleep(1000);
 			}
 
