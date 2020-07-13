@@ -1,17 +1,5 @@
 import java.util.Scanner;
 
-/*
-* Author: Ew0345
-* Version: 1.4
-* Update Log:
-* 	1.4 - Added ability to skip the choice section w/ command-line args & if you choose to not start, 
-		the program will exit without asking for a delay.
-*	1.3 - Added ability for user to decide the delay time between color change.
-*	1.2 - Separated the screen clear into it's own method and called it before asking to start to clear any previous output.
-*	1.1 - Added rerun main method on invalid answer (not yes/no)
-*	1.0 - Released
-*/
-
 public class Rainbow {
     public static void main(String[] args) {
         try (Scanner a = new Scanner(System.in)) {
@@ -46,6 +34,17 @@ public class Rainbow {
 							System.out.print("Delay (ms): ");
 							t = a.nextInt();
 						}
+					} else if (arg.toLowerCase().contains("help")) {
+						System.out.print("Valid Command-line Arugments: \n"
+							+"	SKIP 	| This argument will skip the choice and start the program with a delay of 500ms.\n"
+							+"	EP	| This argument will skip the choice and start the program with a delay of 10ms.\n"
+							+"	INFO 	| This argument will display info about this program and give you the choice to start.\n"
+							+"	HELP	| This is the help."
+						);
+						return;
+					} else {
+						System.out.println("Command-line Arguments are invalid. Please use argument help for info");
+						return;
 					}
 				}
 			} else {
