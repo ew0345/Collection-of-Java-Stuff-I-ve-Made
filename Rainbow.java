@@ -24,7 +24,7 @@ public class Rainbow {
 								+"the program will exit without asking for a delay.\n"
 							+"1.3 - Added ability for user to decide the delay time between color change.\n"
 							+"1.2 - Separated the screen clear into it's own method and called it before asking to start to clear any previous output.\n"
-							+"1.1 - Added rerun main method on invalid answer (not yes/no)"
+							+"1.1 - Added rerun main method on invalid answer (not yes/no)\n"
 							+"1.0 - Released"
 						);
 						System.out.print("Start: ");
